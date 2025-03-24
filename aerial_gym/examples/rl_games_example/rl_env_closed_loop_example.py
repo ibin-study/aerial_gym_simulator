@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     plt.style.use("seaborn-v0_8-colorblind")
     rl_task_env = task_registry.make_task(
-        "position_setpoint_task",
+        "position_setpoint_task_11",
         # "position_setpoint_task_acceleration_sim2real",
         # other params are not set here and default values from the task config file are used
         seed=seed,
@@ -42,7 +42,8 @@ if __name__ == "__main__":
             rl_task_env.task_config.observation_space_dim,
             rl_task_env.task_config.action_space_dim,
             # "networks/morphy_policy_for_rigid_airframe.pth"
-            "networks/attitude_policy.pth"
+            # "networks/attitude_policy.pth"
+            "/home/soobin/aerial_gym/aerial_gym_ws/src/aerial_gym_simulator/aerial_gym/examples/rl_games_example/networks/attitude_policy.pth"
             # "networks/morphy_policy_for_flexible_airframe_joint_aware.pth",
         )
         .to("cuda:0")
