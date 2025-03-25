@@ -8,7 +8,7 @@ from isaacgym import gymapi
 from aerial_gym.assets.base_asset import BaseAsset
 
 
-class IsaacGymAsset(BaseAsset):
+class IsaacGymMultiAsset(BaseAsset):
     def __init__(self, gym, sim, asset_name, asset_file, loading_options):
         super().__init__(asset_name, asset_file, loading_options)
         self.gym = gym
